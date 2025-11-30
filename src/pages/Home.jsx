@@ -1,67 +1,84 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ShaderAnimation } from '../components/ui/shader-animation'
-import { RadialIntro } from '../components/ui/radial-intro'
+import ScrollExpandMedia from '../components/ui/scroll-expansion-hero'
 import { Card3D } from '../components/ui/3d-card'
 import { Counter } from '../components/ui/counter'
+import { Palette, Zap, IndianRupee, Rocket, Target, Sparkles } from 'lucide-react'
+import knightVideo from '../assets/Knight_Video_Generation.mp4'
+import forestVideo from '../assets/Video_Generation_with_Forest_Background.mp4'
 import './Home.css'
 
 const Home = () => {
   return (
     <div className="home-page">
-      {/* Hero Section - Shader Animation Background */}
-      <section className="hero-section">
-        <div className="hero-shader-container">
-          <ShaderAnimation />
-        </div>
-        
-        <div className="hero-content-overlay">
-          <motion.div
-            className="hero-text"
-            initial={{ opacity: 0, y: 30 }}
+      {/* Hero Section - Scroll Expansion with Shader Background */}
+      <ScrollExpandMedia
+        mediaType="video"
+        mediaSrc={knightVideo}
+        expandedMediaSrc={forestVideo}
+        useShaderBackground={true}
+        title="Custom Portfolios Designed to Make You Stand Out"
+        date="Professional Portfolio Services"
+        scrollToExpand="Scroll to explore"
+        textBlend={false}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold mb-6 text-white"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ delay: 0.2 }}
           >
-            <motion.h1
-              className="hero-title"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              Custom Portfolios
-              <br />
-              <span className="gradient-text">Designed to Make</span>
-              <br />
-              You Stand Out
-            </motion.h1>
-            
-            <motion.p
-              className="hero-subtitle"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              Professional, aesthetic and affordable portfolio websites
-              <br />
-              Starting from just ₹2000! Perfect for students, creators, and professionals.
-            </motion.p>
-            
-            <motion.div
-              className="hero-cta"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.8 }}
-            >
-              <Link to="/contact" className="cta-button primary">
-                Start Your Portfolio
-              </Link>
-              <Link to="/showcase" className="cta-button secondary">
-                View Live Samples
-              </Link>
-            </motion.div>
+            Professional, Aesthetic & Affordable
+          </motion.h2>
+          <motion.p 
+            className="text-lg md:text-xl mb-8 text-gray-300"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            Starting from just ₹2000! Perfect for students, creators, and professionals.
+            We create stunning portfolio websites that showcase your work and help you stand out.
+          </motion.p>
+          <motion.div 
+            className="flex flex-wrap gap-4 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Link to="/contact" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors">
+              Start Your Portfolio
+            </Link>
+            <Link to="/showcase" className="px-8 py-3 bg-transparent border-2 border-purple-400 text-purple-300 hover:bg-purple-400/10 rounded-lg font-semibold transition-colors">
+              View Live Samples
+            </Link>
           </motion.div>
         </div>
-      </section>
+      </ScrollExpandMedia>
+
+      {/* Modern Wavy Curve Partition */}
+      <div className="wavy-partition">
+        <svg className="wavy-svg" viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#0a0a0a" />
+              <stop offset="50%" stopColor="#141414" />
+              <stop offset="100%" stopColor="#141414" />
+            </linearGradient>
+          </defs>
+          <path d="M0,200 Q180,140 360,160 T720,150 T1080,160 T1440,140 L1440,200 L0,200 Z" fill="url(#waveGradient1)"></path>
+        </svg>
+        <svg className="wavy-svg wavy-svg-2" viewBox="0 0 1440 200" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="waveGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#000000" />
+              <stop offset="50%" stopColor="#1a1a1a" />
+              <stop offset="100%" stopColor="#141414" />
+            </linearGradient>
+          </defs>
+          <path d="M0,200 Q240,130 480,155 T960,145 T1440,150 L1440,200 L0,200 Z" fill="url(#waveGradient2)"></path>
+        </svg>
+      </div>
 
       {/* Features Section - 3D Cards */}
       <section className="features-section">
@@ -79,42 +96,42 @@ const Home = () => {
           <div className="features-3d-grid">
             {[
               {
-                icon: '🎨',
+                icon: Palette,
                 title: 'Multiple Design Styles',
                 desc: 'From bold & playful to sleek corporate dashboards',
                 month: 'STYLE',
                 date: '01'
               },
               {
-                icon: '⚡',
+                icon: Zap,
                 title: 'Fast Turnaround',
                 desc: 'Your portfolio ready in 5-7 business days. Quick delivery, great quality!',
                 month: 'SPEED',
                 date: '02'
               },
               {
-                icon: '💰',
+                icon: IndianRupee,
                 title: 'Affordable Rates',
                 desc: 'Starting at just ₹2000! Best prices in the market',
                 month: 'VALUE',
                 date: '03'
               },
               {
-                icon: '🚀',
+                icon: Rocket,
                 title: 'Fully Responsive',
                 desc: 'Perfect on desktop, tablet, and mobile devices',
                 month: 'RESP',
                 date: '04'
               },
               {
-                icon: '🎯',
+                icon: Target,
                 title: 'Custom Solutions',
                 desc: 'Tailored to your unique needs and brand',
                 month: 'CUSTOM',
                 date: '05'
               },
               {
-                icon: '✨',
+                icon: Sparkles,
                 title: 'Modern UI/UX',
                 desc: 'Cutting-edge design that impresses employers',
                 month: 'MODERN',
@@ -129,6 +146,7 @@ const Home = () => {
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
               >
                 <Card3D
+                  icon={feature.icon}
                   title={feature.title}
                   content={feature.desc}
                   month={feature.month}
@@ -170,17 +188,11 @@ const Home = () => {
       </section>
 
       {/* Pricing Highlights Section */}
-      <section className="pricing-highlights-section">
+      <section className="pricing-highlights-section" style={{ position: 'relative', zIndex: 100 }}>
         <div className="container">
-          <motion.h2
-            className="section-title"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <h2 className="section-title">
             Simple, Transparent Pricing
-          </motion.h2>
+          </h2>
           
           <div className="pricing-highlights-grid">
             {[
@@ -193,7 +205,7 @@ const Home = () => {
               {
                 name: 'Advanced Portfolio',
                 price: '₹2500',
-                desc: 'Netflix-themed premium designs',
+                desc: 'Themed premium designs',
                 features: ['Premium Themes', 'Advanced Animations', 'Interactive Elements', '5-7 Days Delivery']
               },
               {
@@ -203,13 +215,9 @@ const Home = () => {
                 features: ['Chat Box', 'Email Integration', 'Custom Features', '7-10 Days Delivery']
               }
             ].map((plan, idx) => (
-              <motion.div
+              <div
                 key={idx}
                 className="pricing-highlight-card"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.6 }}
               >
                 <h3>{plan.name}</h3>
                 <div className="pricing-highlight-price">{plan.price}</div>
@@ -222,23 +230,17 @@ const Home = () => {
                 <Link to="/contact" className="pricing-highlight-cta">
                   Get Started
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="contact-info-box"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
+          <div className="contact-info-box">
             <p>
               <strong>Ready to get started?</strong> Call or WhatsApp us at{' '}
               <a href="tel:+918929266960" style={{ color: 'var(--primary-yellow)', textDecoration: 'none' }}>+91 8929266960</a>{' '}
               
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -32,7 +32,7 @@ const Pricing = () => {
       price: 2500,
       originalPrice: 3000,
       discount: '17% off',
-      description: 'Netflix-themed or similar premium designs. Eye-catching and modern.',
+      description: 'Themed or similar premium designs. Eye-catching and modern.',
       buttonText: 'Get Started Now',
       buttonVariant: 'default' as const,
       popular: true,

@@ -170,7 +170,7 @@ const Contact = () => {
                     >
                       <option value="">Select a service</option>
                       <option value="basic">Basic Portfolio - ₹2000</option>
-                      <option value="advanced">Advanced Portfolio (Netflix-themed) - ₹2500</option>
+                      <option value="advanced">Advanced Portfolio (Themed) - ₹2500</option>
                       <option value="customized">Customized Portfolio (with chat, email) - ₹3000+</option>
                       <option value="other">Other / Custom Requirements</option>
                     </select>

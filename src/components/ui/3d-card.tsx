@@ -1,4 +1,5 @@
 import React from 'react';
+import { LucideIcon } from 'lucide-react';
 import './3d-card.css';
 
 interface Card3DProps {
@@ -8,6 +9,7 @@ interface Card3DProps {
   date?: string;
   seeMoreText?: string;
   className?: string;
+  icon?: LucideIcon;
 }
 
 export const Card3D: React.FC<Card3DProps> = ({
@@ -16,12 +18,18 @@ export const Card3D: React.FC<Card3DProps> = ({
   month = 'JUNE',
   date = '29',
   seeMoreText = 'See More',
-  className = ''
+  className = '',
+  icon: Icon
 }) => {
   return (
     <div className={`card-3d-wrapper ${className}`}>
       <div className="card-3d-parent">
         <div className="card-3d">
+          {Icon && (
+            <div className="card-3d-icon">
+              <Icon size={32} />
+            </div>
+          )}
           <div className="card-3d-content-box">
             <span className="card-3d-title">{title}</span>
             <p className="card-3d-content">{content}</p>
