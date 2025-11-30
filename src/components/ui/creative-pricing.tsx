@@ -35,10 +35,10 @@ function CreativePricing({
                     <h2 className="text-4xl md:text-5xl font-bold font-handwritten text-zinc-900 dark:text-white rotate-[-1deg]">
                         {title}
                         <div className="absolute -right-12 top-0 text-amber-500 rotate-12">
-                            ✨
+                            <Sparkles size={32} />
                         </div>
                         <div className="absolute -left-8 bottom-0 text-blue-500 -rotate-12">
-                            ⭐️
+                            <Star size={32} />
                         </div>
                     </h2>
                     <div
@@ -165,10 +165,10 @@ function CreativePricing({
             </div>
             <div className="absolute -z-10 inset-0 overflow-hidden">
                 <div className="absolute top-40 left-20 text-4xl rotate-12">
-                    ✎
+                    <Pencil size={32} />
                 </div>
                 <div className="absolute bottom-40 right-20 text-4xl -rotate-12">
-                    ✏️
+                    <Pencil size={32} />
                 </div>
             </div>
         </div>

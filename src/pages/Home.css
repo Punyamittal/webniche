@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: var(--dark-bg);
   color: var(--text-light);
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 /* Hero Section */
@@ -57,10 +57,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-yellow), var(--primary-purple), var(--accent-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .hero-subtitle {
@@ -211,10 +208,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   text-align: center;
   margin-bottom: 4rem;
-  background: linear-gradient(135deg, var(--primary-yellow), var(--primary-purple));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .features-grid {
@@ -256,13 +250,31 @@
 /* 3D Cards Grid */
 .features-3d-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-top: 4rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+.features-3d-grid > div {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .features-3d-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    gap: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -270,6 +282,11 @@
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  .features-3d-grid > div {
+    max-width: 100%;
   }
 }
 
@@ -375,6 +392,115 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* Pricing Highlights Section */
+.pricing-highlights-section {
+  padding: 8rem 2rem;
+  background: var(--dark-card);
+}
+
+.pricing-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.pricing-highlight-card {
+  background: var(--dark-bg);
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pricing-highlight-card:hover {
+  border-color: var(--primary-purple);
+  box-shadow: 0 20px 60px rgba(103, 41, 255, 0.3);
+  transform: translateY(-8px);
+}
+
+.pricing-highlight-card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.pricing-highlight-price {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.pricing-highlight-desc {
+  color: var(--gray-light);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.pricing-highlight-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  text-align: left;
+}
+
+.pricing-highlight-features li {
+  color: var(--gray-light);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+}
+
+.pricing-highlight-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-highlight-cta {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-highlight-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.4);
+}
+
+.contact-info-box {
+  background: rgba(103, 41, 255, 0.1);
+  border: 1px solid rgba(103, 41, 255, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-info-box p {
+  color: var(--text-light);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.contact-info-box a {
+  transition: all 0.3s ease;
+}
+
+.contact-info-box a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 968px) {
   .hero-content-overlay {
     padding: 2rem 1rem;
@@ -382,6 +508,11 @@
   
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 

@@ -22,7 +22,7 @@ const Chatbot = () => {
     // Simulate bot response
     setTimeout(() => {
       const responses = {
-        'pricing': 'Our pricing starts at $299 for students, $599 for professionals, and $999+ for businesses. Check our Pricing page for details!',
+        'pricing': 'Our pricing starts at ₹2000 for basic portfolios, ₹2500 for advanced portfolios, and ₹3000+ for customized portfolios. Check our Pricing page for details!',
         'timeline': 'Portfolio projects typically take 5-7 business days. Complex projects may take 10-14 days.',
         'requirements': 'Just share your resume, work samples, and any design preferences. We handle the rest!',
         'website': 'Yes! We create custom websites for companies, stores, and multi-purpose projects. Visit our Services page!',
@@ -74,7 +74,7 @@ const Chatbot = () => {
               <div className="chatbot-header-info">
                 <div className="chatbot-avatar"></div>
                 <div>
-                  <h3>PortfolioCraft Assistant</h3>
+                  <h3>WebNICHE Assistant</h3>
                   <p>Online • Usually replies instantly</p>
                 </div>
               </div>

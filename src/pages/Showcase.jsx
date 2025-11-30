@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { RadialIntro } from '../components/ui/radial-intro'
+import ExpandOnHover from '../components/ui/expand-cards'
 import MagicBento from '../components/ui/magic-bento'
 import { TestimonialModal } from '../components/ui/testimonial-modal'
 import ColorBends from '../components/ui/color-bends'
@@ -15,14 +15,14 @@ const Showcase = () => {
       name: 'Sarah Chen',
       role: 'Graphic Designer',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      quote: 'PortfolioCraft transformed my online presence! The design perfectly captures my creative style and has helped me land several new clients.',
+      quote: 'WebNICHE transformed my online presence! The design perfectly captures my creative style and has helped me land several new clients.',
       rating: 5
     },
     Developer: {
       name: 'Alex Rodriguez',
       role: 'Full Stack Developer',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-      quote: 'As a developer, I needed a portfolio that showcases my technical skills. PortfolioCraft delivered exactly what I needed with a modern, professional design.',
+      quote: 'As a developer, I needed a portfolio that showcases my technical skills. WebNICHE delivered exactly what I needed with a modern, professional design.',
       rating: 5
     },
     Photographer: {
@@ -50,7 +50,7 @@ const Showcase = () => {
       name: 'Lisa Anderson',
       role: 'Startup Founder',
       image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-      quote: 'PortfolioCraft helped me create a professional online presence for my startup. The design is modern, engaging, and perfectly represents our brand.',
+      quote: 'WebNICHE helped me create a professional online presence for my startup. The design is modern, engaging, and perfectly represents our brand.',
       rating: 5
     },
     Consultant: {
@@ -64,7 +64,7 @@ const Showcase = () => {
       name: 'Maria Garcia',
       role: 'Freelance Designer',
       image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop',
-      quote: 'As a freelancer, having a standout portfolio is crucial. PortfolioCraft created something truly special that sets me apart from the competition.',
+      quote: 'As a freelancer, having a standout portfolio is crucial. WebNICHE created something truly special that sets me apart from the competition.',
       rating: 5
     }
   }
@@ -143,7 +143,7 @@ const Showcase = () => {
       <section className="showcase-hero">
         <div className="showcase-hero-background">
           <ColorBends
-            colors={["#ff5c7a", "#8a5cff", "#00ffd1"]}
+            colors={["#6729FF", "#4ECDC4", "#FFE043"]}
             rotation={30}
             speed={0.3}
             scale={1.2}
@@ -151,7 +151,7 @@ const Showcase = () => {
             warpStrength={1.2}
             mouseInfluence={0.8}
             parallax={0.6}
-            noise={0.08}
+            noise={0.05}
             transparent
           />
         </div>
@@ -165,7 +165,9 @@ const Showcase = () => {
             Our <span className="highlight">Work</span>
           </h1>
           <p className="showcase-subtitle">
-            Explore our portfolio of stunning designs across different styles and industries
+            Explore our portfolio of stunning designs across different styles and industries.
+            <br />
+            Check out live sample portfolios below!
           </p>
         </motion.div>
       </section>
@@ -229,29 +231,93 @@ const Showcase = () => {
               We've helped hundreds of professionals showcase their work
             </motion.p>
             <motion.div
-              className="radial-intro-container"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="expand-cards-container"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <RadialIntro
-                orbitItems={[
-                  { id: 1, name: 'Designer', src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop' },
-                  { id: 2, name: 'Developer', src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop' },
-                  { id: 3, name: 'Photographer', src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop' },
-                  { id: 4, name: 'Artist', src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop' },
-                  { id: 5, name: 'Writer', src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop' },
-                  { id: 6, name: 'Entrepreneur', src: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop' },
-                  { id: 7, name: 'Consultant', src: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop' },
-                  { id: 8, name: 'Freelancer', src: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop' }
+              <ExpandOnHover
+                images={[
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop'
                 ]}
-                stageSize={380}
-                imageSize={65}
-                onItemClick={handleItemClick}
+                defaultExpanded={5}
+                className="rounded-2xl overflow-hidden"
               />
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Live Sample Portfolios */}
+      <section className="live-samples-section">
+        <div className="container">
+          <motion.h2
+            className="section-title"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Live Sample <span className="highlight">Portfolios</span>
+          </motion.h2>
+          <motion.p
+            className="section-subtitle"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            Check out these real portfolios we've created. Click to view them live!
+          </motion.p>
+          
+          <div className="live-samples-grid">
+            {[
+              {
+                name: 'New Stem Portfolio',
+                url: 'https://newstempport.netlify.app/',
+                description: 'Modern and clean portfolio design'
+              },
+              {
+                name: 'Aastha Portfolio',
+                url: 'https://aasthahere.netlify.app/',
+                description: 'Elegant and professional layout'
+              },
+              {
+                name: 'Tumhari Chawal',
+                url: 'https://tumharichawal.netlify.app/',
+                description: 'Creative and unique design style'
+              }
+            ].map((sample, idx) => (
+              <motion.div
+                key={idx}
+                className="live-sample-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.15, duration: 0.6 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <h3>{sample.name}</h3>
+                <p>{sample.description}</p>
+                <a 
+                  href={sample.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="live-sample-link"
+                >
+                  View Live Site →
+                </a>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

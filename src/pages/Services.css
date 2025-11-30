@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: var(--dark-bg);
   color: var(--text-light);
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 .services-hero {
@@ -23,6 +23,17 @@
   color: var(--gray-light);
   max-width: 700px;
   margin: 0 auto;
+}
+
+.highlight {
+  color: #ffffff;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #ffffff;
 }
 
 .services-section {
@@ -53,6 +64,12 @@
 .service-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  width: 64px;
+  height: 64px;
 }
 
 .service-title {
@@ -193,6 +210,12 @@
 
 .stat-icon {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  width: 48px;
+  height: 48px;
 }
 
 .stat-value-dashboard {
@@ -326,6 +349,12 @@
 .api-feature-icon {
   font-size: 2rem;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-purple);
+  width: 48px;
+  height: 48px;
 }
 
 .api-feature-item h4 {
@@ -375,6 +404,14 @@
   align-items: center;
   padding: 3rem 0;
   min-height: 500px;
+}
+
+.expand-cards-container-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
 }
 
 /* Process Section */

@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: #141414;
   color: #ffffff;
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 /* Hero Section */
@@ -90,28 +90,43 @@
 
 .pricing-cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  background: #1a1a1a;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   position: relative;
   margin-bottom: 1rem;
 }
 
+@media (max-width: 1024px) {
+  .pricing-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .pricing-card-modern {
   position: relative;
-  padding: 1.5rem;
-  background: transparent;
-  border-radius: 8px;
+  padding: 2rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.pricing-card-modern:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .pricing-card-popular {
-  background: transparent;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1.5rem;
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid rgba(103, 41, 255, 0.5);
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(103, 41, 255, 0.2);
 }
 
 .pricing-corner-icon {
@@ -227,6 +242,20 @@
   transition: all 0.2s ease;
 }
 
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.pricing-features-list li {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 .pricing-footer-note {
   display: flex;
   align-items: center;
@@ -304,7 +333,7 @@
 
   .pricing-cards-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .pricing-card-modern {

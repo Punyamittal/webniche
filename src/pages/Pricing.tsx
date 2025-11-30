@@ -10,24 +10,58 @@ import './Pricing.css'
 const Pricing = () => {
   const plans = [
     {
-      name: 'Monthly',
-      price: 299,
-      originalPrice: 599,
-      discount: '50% off',
-      description: 'Best value for growing businesses!',
-      buttonText: 'Start Your Journey',
+      name: 'Basic Portfolio',
+      price: 2000,
+      originalPrice: null,
+      discount: null,
+      description: 'Perfect for students and beginners. Clean, professional portfolio website.',
+      buttonText: 'Get Started',
       buttonVariant: 'outline' as const,
-      popular: false
+      popular: false,
+      features: [
+        'Responsive design',
+        'Up to 5 sections',
+        'Contact form',
+        'Social media links',
+        'Basic customization',
+        '5-7 days delivery'
+      ]
     },
     {
-      name: 'Yearly',
-      price: 599,
-      originalPrice: 999,
-      discount: '40% off',
-      description: 'Unlock savings with an annual commitment!',
+      name: 'Advanced Portfolio',
+      price: 2500,
+      originalPrice: 3000,
+      discount: '17% off',
+      description: 'Netflix-themed or similar premium designs. Eye-catching and modern.',
       buttonText: 'Get Started Now',
       buttonVariant: 'default' as const,
-      popular: true
+      popular: true,
+      features: [
+        'Premium theme designs',
+        'Unlimited sections',
+        'Advanced animations',
+        'Video/image galleries',
+        'Interactive elements',
+        '5-7 days delivery'
+      ]
+    },
+    {
+      name: 'Customized Portfolio',
+      price: 3000,
+      originalPrice: null,
+      discount: null,
+      description: 'Full customization with chat box, email integrations, and more.',
+      buttonText: 'Get Started',
+      buttonVariant: 'outline' as const,
+      popular: false,
+      features: [
+        'Chat box integration',
+        'Email link-ups',
+        'Custom features',
+        'API integrations',
+        'Priority support',
+        '7-10 days delivery'
+      ]
     }
   ]
 
@@ -46,7 +80,7 @@ const Pricing = () => {
     },
     {
       question: 'How long does it take?',
-      answer: 'Student plans: 5-7 days, Professional: 7-10 days, Business: 10-14 days. Complex projects may take longer.'
+      answer: 'Basic Portfolio: 5-7 days, Advanced Portfolio: 5-7 days, Customized Portfolio: 7-10 days. We deliver fast without compromising on quality!'
     },
     {
       question: 'Do you offer payment plans?',
@@ -54,7 +88,15 @@ const Pricing = () => {
     },
     {
       question: 'Can I see examples before ordering?',
-      answer: 'Absolutely! Check our Showcase page to see our previous work and different design styles.'
+      answer: 'Absolutely! Check our Showcase page to see live sample portfolios. You can also view: newstempport.netlify.app, aasthahere.netlify.app, and tumharichawal.netlify.app'
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer: 'We accept various payment methods. Contact us at 8929266960 or 9899727395 to discuss payment options that work best for you.'
+    },
+    {
+      question: 'Do you provide hosting and domain?',
+      answer: 'Hosting is not included in the base price, but we can help you set up free hosting on platforms like Netlify. Domain purchase (if needed) is separate and we can guide you through it.'
     }
   ]
 
@@ -73,11 +115,11 @@ const Pricing = () => {
               <div className="pricing-badge">Pricing</div>
             </div>
             <h1 className="pricing-main-title">
-              Pricing Based on Your Success
+              Affordable Portfolio Websites
             </h1>
             <p className="pricing-description">
-              We offer a single price for all our services. We believe that pricing is a critical component of any
-              successful business.
+              Get a professional, beautiful portfolio website at unbeatable prices. Starting from just ₹2000, 
+              we create stunning portfolios that help you stand out and land opportunities.
             </p>
           </motion.div>
 
@@ -132,7 +174,9 @@ const Pricing = () => {
                         <div className="pricing-card-title-row">
                           <h3 className="pricing-card-title">{plan.name}</h3>
                           <div className="pricing-discount-badge-wrapper">
-                            <span className="pricing-original-price">${plan.originalPrice}</span>
+                            {plan.originalPrice && (
+                              <span className="pricing-original-price">₹{plan.originalPrice.toLocaleString('en-IN')}</span>
+                            )}
                             <Badge variant={plan.popular ? 'default' : 'secondary'}>
                               {plan.discount}
                             </Badge>
@@ -143,10 +187,17 @@ const Pricing = () => {
 
                       <div className="pricing-card-price-section">
                         <div className="pricing-price-display">
-                          <span className="pricing-currency">$</span>
-                          <span className="pricing-amount-large">{plan.price}</span>
+                          <span className="pricing-currency">₹</span>
+                          <span className="pricing-amount-large">{plan.price.toLocaleString('en-IN')}</span>
                           <span className="pricing-period">/one-time</span>
                         </div>
+                        {plan.features && (
+                          <ul className="pricing-features-list">
+                            {plan.features.map((feature, idx) => (
+                              <li key={idx}>✓ {feature}</li>
+                            ))}
+                          </ul>
+                        )}
                         <Button className="pricing-cta-button" variant={plan.buttonVariant} asChild>
                           <Link to="/contact">{plan.buttonText}</Link>
                         </Button>

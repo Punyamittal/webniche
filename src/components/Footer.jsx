@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="container">
           <div className="footer-grid">
             <div className="footer-column">
-              <h3 className="footer-title">PortfolioCraft</h3>
+              <h3 className="footer-title">WebNICHE</h3>
               <p className="footer-description">
                 Professional portfolio websites designed to make you stand out.
               </p>
@@ -48,13 +48,13 @@ const Footer = () => {
               <h4 className="footer-heading">Contact</h4>
               <ul className="footer-links">
                 <li><Link to="/contact">Contact Us</Link></li>
-                <li><a href="mailto:info@portfoliocraft.com">info@portfoliocraft.com</a></li>
+                <li><a href="mailto:info@WebNICHE.com">info@WebNICHE.com</a></li>
               </ul>
             </div>
           </div>
           
           <div className="footer-bottom">
-            <p>&copy; {new Date().getFullYear()} PortfolioCraft. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} WebNICHE. All rights reserved.</p>
           </div>
         </div>
       </div>

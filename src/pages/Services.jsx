@@ -1,13 +1,14 @@
 import { motion } from 'framer-motion'
 import DatabaseWithRestApi from '../components/ui/database-with-rest-api'
-import { RadialIntro } from '../components/ui/radial-intro'
+import ExpandOnHover from '../components/ui/expand-cards'
+import { Building2, ShoppingCart, Rocket, Target, Plug, Database, Zap, Lock, BarChart3, Users, TrendingUp } from 'lucide-react'
 import './Services.css'
 
 const Services = () => {
   const serviceTypes = [
     {
       title: 'Corporate Websites',
-      icon: '🏢',
+      icon: Building2,
       description: 'Professional websites for businesses and organizations',
       features: [
         'Custom branding integration',
@@ -21,7 +22,7 @@ const Services = () => {
     },
     {
       title: 'E-commerce Stores',
-      icon: '🛒',
+      icon: ShoppingCart,
       description: 'Full-featured online stores with shopping cart functionality',
       features: [
         'Product catalog management',
@@ -35,7 +36,7 @@ const Services = () => {
     },
     {
       title: 'SaaS Landing Pages',
-      icon: '🚀',
+      icon: Rocket,
       description: 'High-converting landing pages for SaaS products',
       features: [
         'Feature showcases',
@@ -49,7 +50,7 @@ const Services = () => {
     },
     {
       title: 'Multi-Purpose Projects',
-      icon: '🎯',
+      icon: Target,
       description: 'Complex websites combining multiple functionalities',
       features: [
         'Custom CMS development',
@@ -95,10 +96,11 @@ const Services = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="services-title">
-            Services for <span className="highlight">Companies</span>
+            Portfolio <span className="highlight">Services</span>
           </h1>
           <p className="services-subtitle">
-            We create custom websites for businesses, stores, and multi-purpose projects
+            We specialize in creating stunning, affordable portfolio websites for students, professionals, and creators.
+            Starting from just ₹2000!
           </p>
         </motion.div>
       </section>
@@ -116,7 +118,9 @@ const Services = () => {
                 transition={{ delay: idx * 0.1, duration: 0.6 }}
                 whileHover={{ y: -10, scale: 1.02 }}
               >
-                <div className="service-icon">{service.icon}</div>
+                <div className="service-icon">
+                  {service.icon && <service.icon size={32} />}
+                </div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
                 
@@ -179,28 +183,36 @@ const Services = () => {
                 transition={{ delay: 0.4 }}
               >
                 <div className="api-feature-item">
-                  <div className="api-feature-icon">🔌</div>
+                  <div className="api-feature-icon">
+                    <Plug size={24} />
+                  </div>
                   <div>
                     <h4>REST API Development</h4>
                     <p>Custom RESTful APIs with proper endpoints and documentation</p>
                   </div>
                 </div>
                 <div className="api-feature-item">
-                  <div className="api-feature-icon">🗄️</div>
+                  <div className="api-feature-icon">
+                    <Database size={24} />
+                  </div>
                   <div>
                     <h4>Database Integration</h4>
                     <p>Seamless database connections and optimized queries</p>
                   </div>
                 </div>
                 <div className="api-feature-item">
-                  <div className="api-feature-icon">⚡</div>
+                  <div className="api-feature-icon">
+                    <Zap size={24} />
+                  </div>
                   <div>
                     <h4>Real-time Updates</h4>
                     <p>Live data synchronization and real-time features</p>
                   </div>
                 </div>
                 <div className="api-feature-item">
-                  <div className="api-feature-icon">🔒</div>
+                  <div className="api-feature-icon">
+                    <Lock size={24} />
+                  </div>
                   <div>
                     <h4>Secure & Scalable</h4>
                     <p>Enterprise-grade security and scalable architecture</p>
@@ -225,7 +237,7 @@ const Services = () => {
                   fourth: "DELETE"
                 }}
                 buttonTexts={{
-                  first: "PortfolioCraft",
+                  first: "WebNICHE",
                   second: "v2.0"
                 }}
                 lightColor="#6729FF"
@@ -269,21 +281,27 @@ const Services = () => {
             <div className="dashboard-content">
               <div className="dashboard-stats">
                 <div className="stat-card-dashboard">
-                  <div className="stat-icon">📊</div>
+                  <div className="stat-icon">
+                    <BarChart3 size={24} />
+                  </div>
                   <div className="stat-info">
-                    <div className="stat-value-dashboard">$41,200</div>
+                    <div className="stat-value-dashboard">₹41,200</div>
                     <div className="stat-label-dashboard">Revenue</div>
                   </div>
                 </div>
                 <div className="stat-card-dashboard">
-                  <div className="stat-icon">👥</div>
+                  <div className="stat-icon">
+                    <Users size={24} />
+                  </div>
                   <div className="stat-info">
                     <div className="stat-value-dashboard">1,234</div>
                     <div className="stat-label-dashboard">Users</div>
                   </div>
                 </div>
                 <div className="stat-card-dashboard">
-                  <div className="stat-icon">📈</div>
+                  <div className="stat-icon">
+                    <TrendingUp size={24} />
+                  </div>
                   <div className="stat-info">
                     <div className="stat-value-dashboard">+12.5%</div>
                     <div className="stat-label-dashboard">Growth</div>
@@ -341,25 +359,26 @@ const Services = () => {
               We leverage cutting-edge technologies to build modern, scalable solutions
             </motion.p>
             <motion.div
-              className="radial-intro-container-services"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="expand-cards-container-services"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8 }}
             >
-              <RadialIntro
-                orbitItems={[
-                  { id: 1, name: 'React', src: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop' },
-                  { id: 2, name: 'Vue.js', src: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=400&fit=crop' },
-                  { id: 3, name: 'Angular', src: 'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=400&fit=crop' },
-                  { id: 4, name: 'Node.js', src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop' },
-                  { id: 5, name: 'Python', src: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=400&fit=crop' },
-                  { id: 6, name: 'MongoDB', src: 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400&h=400&fit=crop' },
-                  { id: 7, name: 'PostgreSQL', src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop' },
-                  { id: 8, name: 'AWS', src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop' }
+              <ExpandOnHover
+                images={[
+                  'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=400&fit=crop',
+                  'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=400&fit=crop'
                 ]}
-                stageSize={400}
-                imageSize={70}
+                defaultExpanded={5}
+                className="rounded-2xl overflow-hidden"
               />
             </motion.div>
           </motion.div>

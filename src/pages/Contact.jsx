@@ -77,8 +77,8 @@ const Contact = () => {
                 <div className="info-item">
                   <div className="info-icon">📧</div>
                   <div>
-                    <h3>Email</h3>
-                    <p>hello@portfoliocraft.com</p>
+                    <h3>Contact Us</h3>
+                    <p>Reach out via phone or WhatsApp for fastest response!</p>
                   </div>
                 </div>
                 
@@ -86,7 +86,11 @@ const Contact = () => {
                   <div className="info-icon">📱</div>
                   <div>
                     <h3>Phone</h3>
-                    <p>+1 (555) 123-4567</p>
+                    <p>
+                      <a href="tel:+918929266960" style={{ color: 'inherit', textDecoration: 'none' }}>+91 8929266960</a>
+                      <br />
+                      
+                    </p>
                   </div>
                 </div>
                 
@@ -151,7 +155,7 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 9876543210"
                     />
                   </div>
                   
@@ -165,12 +169,10 @@ const Contact = () => {
                       required
                     >
                       <option value="">Select a service</option>
-                      <option value="student">Student Portfolio</option>
-                      <option value="professional">Professional Portfolio</option>
-                      <option value="business">Business Website</option>
-                      <option value="ecommerce">E-commerce Store</option>
-                      <option value="saas">SaaS Landing Page</option>
-                      <option value="other">Other</option>
+                      <option value="basic">Basic Portfolio - ₹2000</option>
+                      <option value="advanced">Advanced Portfolio (Netflix-themed) - ₹2500</option>
+                      <option value="customized">Customized Portfolio (with chat, email) - ₹3000+</option>
+                      <option value="other">Other / Custom Requirements</option>
                     </select>
                   </div>
                 </div>
@@ -185,9 +187,9 @@ const Contact = () => {
                     required
                   >
                     <option value="">Select budget range</option>
-                    <option value="student">$299 - Student Plan</option>
-                    <option value="professional">$599 - Professional Plan</option>
-                    <option value="business">$999+ - Business Plan</option>
+                    <option value="basic">₹2000 - Basic Portfolio</option>
+                    <option value="advanced">₹2500 - Advanced Portfolio</option>
+                    <option value="customized">₹3000+ - Customized Portfolio</option>
                     <option value="custom">Custom Quote</option>
                   </select>
                 </div>

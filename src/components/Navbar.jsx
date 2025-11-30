@@ -1,50 +1,52 @@
-import { Link, useLocation } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import CardNav from './CardNav'
+import logo from '../assets/logo.svg'
 import './Navbar.css'
 
 const Navbar = () => {
-  const location = useLocation()
-
-  const navItems = [
-    { path: '/', label: 'HOME' },
-    { path: '/showcase', label: 'SHOWCASE' },
-    { path: '/templates', label: 'TEMPLATES' },
-    { path: '/pricing', label: 'PRICING' },
-    { path: '/services', label: 'SERVICES' },
-    { path: '/contact', label: 'CONTACT' },
+  const items = [
+    {
+      label: 'Explore',
+      bgColor: '#0D0716',
+      textColor: '#fff',
+      links: [
+        { label: 'Templates', href: '/templates', ariaLabel: 'View Templates' },
+        { label: 'Showcase', href: '/showcase', ariaLabel: 'View Showcase' },
+        { label: 'Services', href: '/services', ariaLabel: 'View Services' }
+      ]
+    },
+    {
+      label: 'Pricing',
+      bgColor: '#170D27',
+      textColor: '#fff',
+      links: [
+        { label: 'View Plans', href: '/pricing', ariaLabel: 'View Pricing Plans' },
+        { label: 'Compare', href: '/pricing', ariaLabel: 'Compare Pricing' }
+      ]
+    },
+    {
+      label: 'Contact',
+      bgColor: '#271E37',
+      textColor: '#fff',
+      links: [
+        { label: 'Get in Touch', href: '/contact', ariaLabel: 'Contact Us' },
+        { label: 'Support', href: '/contact', ariaLabel: 'Get Support' }
+      ]
+    }
   ]
 
   return (
-    <motion.nav 
-      className="navbar"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="nav-container">
-        <Link to="/" className="logo">
-          <div className="logo-icon">
-            <div className="logo-dots">
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-            </div>
-          </div>
-          <span className="logo-text">PortfolioCraft</span>
-        </Link>
-        
-        <div className="nav-links">
-          {navItems.map((item) => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </div>
-    </motion.nav>
+    <CardNav
+      logo={logo}
+      logoAlt="WebNICHE Logo"
+      items={items}
+      baseColor="#fff"
+      menuColor="#000"
+      buttonBgColor="#111"
+      buttonTextColor="#fff"
+      ease="power3.out"
+      ctaLink="/contact"
+      ctaText="Get Started"
+    />
   )
 }
 

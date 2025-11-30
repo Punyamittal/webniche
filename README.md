@@ -1,4 +1,4 @@
-# PortfolioCraft - Custom Portfolio Design Services
+# WebNICHE - Custom Portfolio Design Services
 
 A high-end, multi-page freelancing website for a service that builds custom portfolios for students, professionals, creators, and companies. The website features stunning, modern UI designs inspired by various reference styles.
 

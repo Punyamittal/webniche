@@ -2,7 +2,17 @@
   min-height: 100vh;
   background: var(--dark-bg);
   color: var(--text-light);
-  padding-top: 80px;
+  padding-top: 0;
+}
+
+.templates-hero-section {
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  background: var(--dark-bg);
+  overflow: hidden;
+  z-index: 0;
 }
 
 .templates-hero {
@@ -233,10 +243,7 @@
 .futuristic-content h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #6729FF, #00FFFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
 }
 
 .futuristic-grid {

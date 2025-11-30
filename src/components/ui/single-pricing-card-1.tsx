@@ -57,7 +57,7 @@ export function SinglePricingCard() {
 									<div className="flex items-center justify-between">
 										<h3 className="leading-none font-semibold text-white">Student</h3>
 										<div className="flex items-center gap-x-1">
-											<span className="text-white/60 text-sm line-through">$599</span>
+											<span className="text-white/60 text-sm line-through">₹599</span>
 											<Badge variant="secondary">50% off</Badge>
 										</div>
 									</div>
@@ -65,7 +65,7 @@ export function SinglePricingCard() {
 								</div>
 								<div className="mt-10 space-y-4">
 									<div className="text-white/70 flex items-end gap-0.5 text-xl">
-										<span>$</span>
+										<span>₹</span>
 										<span className="text-white -mb-0.5 text-4xl font-extrabold tracking-tighter md:text-5xl">
 											299
 										</span>
@@ -88,7 +88,7 @@ export function SinglePricingCard() {
 									<div className="flex items-center justify-between">
 										<h3 className="leading-none font-semibold text-white">Professional</h3>
 										<div className="flex items-center gap-x-1">
-											<span className="text-white/60 text-sm line-through">$999</span>
+											<span className="text-white/60 text-sm line-through">₹999</span>
 											<Badge>40% off</Badge>
 										</div>
 									</div>
@@ -96,7 +96,7 @@ export function SinglePricingCard() {
 								</div>
 								<div className="mt-10 space-y-4">
 									<div className="text-white/70 flex items-end text-xl">
-										<span>$</span>
+										<span>₹</span>
 										<span className="text-white -mb-0.5 text-4xl font-extrabold tracking-tighter md:text-5xl">
 											599
 										</span>

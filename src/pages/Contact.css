@@ -2,7 +2,7 @@
   min-height: 100vh;
   background: var(--dark-bg);
   color: var(--text-light);
-  padding-top: 80px;
+  padding-top: 0;
 }
 
 .contact-hero {
@@ -23,6 +23,10 @@
   color: var(--gray-light);
   max-width: 700px;
   margin: 0 auto;
+}
+
+.highlight {
+  color: #ffffff;
 }
 
 .contact-section {
