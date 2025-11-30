@@ -46,10 +46,10 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Link to="/contact" className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold transition-colors">
+            <Link to="/contact" className="px-8 py-3 bg-white hover:bg-gray-100 text-black rounded-lg font-semibold transition-colors">
               Start Your Portfolio
             </Link>
-            <Link to="/showcase" className="px-8 py-3 bg-transparent border-2 border-purple-400 text-purple-300 hover:bg-purple-400/10 rounded-lg font-semibold transition-colors">
+            <Link to="/showcase" className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-lg font-semibold transition-colors">
               View Live Samples
             </Link>
           </motion.div>

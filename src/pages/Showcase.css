@@ -34,7 +34,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(103, 41, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
   z-index: 1;
 }
 
@@ -120,8 +120,8 @@
 }
 
 .project-card:hover {
-  border-color: var(--primary-purple);
-  box-shadow: 0 20px 60px rgba(103, 41, 255, 0.3);
+  border-color: #ffffff;
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
 }
 
 .project-preview {
@@ -212,7 +212,7 @@
 .project-button {
   width: 100%;
   padding: 0.875rem;
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  background: linear-gradient(135deg, #ffffff, var(--primary-blue));
   border: none;
   border-radius: 12px;
   color: white;
@@ -223,7 +223,7 @@
 
 .project-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
 }
 
 .clients-section {
@@ -301,7 +301,7 @@
 .style-example {
   display: inline-block;
   font-size: 0.875rem;
-  color: var(--primary-purple);
+  color: #ffffff;
   font-style: italic;
 }
 

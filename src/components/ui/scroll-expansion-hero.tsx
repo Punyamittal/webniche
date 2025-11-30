@@ -8,6 +8,7 @@ import {
 } from 'react';
 import { motion } from 'framer-motion';
 import AnimatedShaderBackground from './animated-shader-background';
+import { ShaderLines } from './shader-lines';
 
 // Video component that loops at a specific percentage and can switch videos
 const VideoWithLoop: React.FC<{ 
@@ -280,7 +281,7 @@ const ScrollExpandMedia = ({
         <div className='relative w-full flex flex-col items-center min-h-[100dvh]'>
           {useShaderBackground ? (
             <div className='absolute inset-0 z-0 h-full'>
-              <AnimatedShaderBackground />
+              <ShaderLines />
               <motion.div 
                 className='absolute inset-0 bg-black/30'
                 initial={{ opacity: 0.3 }}
@@ -316,7 +317,7 @@ const ScrollExpandMedia = ({
                   height: `${mediaHeight}px`,
                   maxWidth: '95vw',
                   maxHeight: '85vh',
-                  boxShadow: '0px 0px 50px rgba(103, 41, 255, 0.5)',
+                  boxShadow: '0px 0px 50px rgba(255, 255, 255, 0.5)',
                 }}
               >
                 {mediaType === 'video' ? (
@@ -340,7 +341,7 @@ const ScrollExpandMedia = ({
                         allowFullScreen
                       />
                       <motion.div
-                        className='absolute inset-0 bg-gradient-to-b from-purple-900/30 to-black/50 rounded-xl'
+                        className='absolute inset-0 bg-gradient-to-b from-white/10 to-black/50 rounded-xl'
                         initial={{ opacity: 0.7 }}
                         animate={{ opacity: 0.5 - scrollProgress * 0.3 }}
                         transition={{ duration: 0.2 }}
@@ -355,13 +356,13 @@ const ScrollExpandMedia = ({
                         loopPoint={0.75}
                         scrollProgress={scrollProgress}
                       />
-                      {/* Dynamic overlay - purple when not scrolling, black ash when transitioning */}
+                      {/* Dynamic overlay - white when not scrolling, black ash when transitioning */}
                       <motion.div
                         className='absolute inset-0 rounded-xl'
                         style={{
                           background: scrollProgress > 0.1 
                             ? `linear-gradient(135deg, rgba(0, 0, 0, ${0.5 + scrollProgress * 0.3}) 0%, rgba(20, 20, 20, ${0.6 + scrollProgress * 0.2}) 50%, rgba(0, 0, 0, ${0.7 + scrollProgress * 0.2}) 100%)`
-                            : 'linear-gradient(135deg, rgba(103, 41, 255, 0.4) 0%, rgba(139, 92, 246, 0.3) 50%, rgba(167, 139, 250, 0.35) 100%)',
+                            : 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.08) 100%)',
                           mixBlendMode: scrollProgress > 0.1 ? 'normal' : 'overlay',
                         }}
                         initial={{ opacity: 1 }}
@@ -381,9 +382,9 @@ const ScrollExpandMedia = ({
                           transition={{ duration: 0.4 }}
                         />
                       )}
-                      {/* Fade out purple overlay as scroll progresses */}
+                      {/* Fade out white overlay as scroll progresses */}
                       <motion.div
-                        className='absolute inset-0 bg-gradient-to-b from-purple-600/20 via-purple-500/15 to-black/40 rounded-xl pointer-events-none'
+                        className='absolute inset-0 bg-gradient-to-b from-white/10 via-white/5 to-black/40 rounded-xl pointer-events-none'
                         initial={{ opacity: 1 }}
                         animate={{ opacity: Math.max(0, 1 - scrollProgress * 2) }}
                         transition={{ duration: 0.3 }}
@@ -398,7 +399,7 @@ const ScrollExpandMedia = ({
                       className='w-full h-full object-cover rounded-xl'
                     />
                     <motion.div
-                      className='absolute inset-0 bg-gradient-to-b from-purple-900/50 to-black/70 rounded-xl'
+                      className='absolute inset-0 bg-gradient-to-b from-white/20 to-black/70 rounded-xl'
                       initial={{ opacity: 0.7 }}
                       animate={{ opacity: 0.7 - scrollProgress * 0.3 }}
                       transition={{ duration: 0.2 }}
@@ -433,13 +434,19 @@ const ScrollExpandMedia = ({
               >
                 <motion.h2
                   className='text-4xl md:text-5xl lg:text-6xl font-bold text-white transition-none'
-                  style={{ transform: `translateX(-${textTranslateX}vw)` }}
+                  style={{ 
+                    transform: `translateX(-${textTranslateX}vw)`,
+                    textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.5)'
+                  }}
                 >
                   {firstWord}
                 </motion.h2>
                 <motion.h2
                   className='text-4xl md:text-5xl lg:text-6xl font-bold text-center text-white transition-none'
-                  style={{ transform: `translateX(${textTranslateX}vw)` }}
+                  style={{ 
+                    transform: `translateX(${textTranslateX}vw)`,
+                    textShadow: '0 4px 20px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.6), 0 0 5px rgba(0, 0, 0, 0.5)'
+                  }}
                 >
                   {restOfTitle}
                 </motion.h2>

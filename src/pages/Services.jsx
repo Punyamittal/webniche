@@ -240,7 +240,7 @@ const Services = () => {
                   first: "WebNICHE",
                   second: "v2.0"
                 }}
-                lightColor="#6729FF"
+                lightColor="#ffffff"
               />
             </motion.div>
           </motion.div>

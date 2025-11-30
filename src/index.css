@@ -62,9 +62,9 @@
 
 /* Custom CSS Variables (keeping existing design system) */
 :root {
-  --primary-blue: #6729FF;
+  --primary-blue: #ffffff;
   --primary-yellow: #FFE043;
-  --primary-purple: #6729FF;
+  --primary-purple: #ffffff;
   --dark-bg: #141414;
   --dark-card: #1a1a1a;
   --text-light: #ffffff;
@@ -99,12 +99,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-purple);
+  background: #ffffff;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-blue);
+  background: #e0e0e0;
 }
 
 /* Handwritten Font for Creative Pricing */

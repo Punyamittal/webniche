@@ -18,7 +18,7 @@
 .templates-hero {
   padding: 6rem 2rem 4rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(103, 41, 255, 0.1), rgba(255, 224, 67, 0.1));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 224, 67, 0.1));
 }
 
 .templates-title {
@@ -203,7 +203,7 @@
 
 .chart-bar {
   flex: 1;
-  background: linear-gradient(180deg, #4ECDC4, #6729FF);
+  background: linear-gradient(180deg, #4ECDC4, #ffffff);
   border-radius: 4px 4px 0 0;
   min-height: 20px;
 }
@@ -220,7 +220,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(103, 41, 255, 0.3), transparent);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
@@ -255,7 +255,7 @@
 .futuristic-card {
   position: relative;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(103, 41, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -268,7 +268,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(103, 41, 255, 0.2), transparent);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
   animation: rotate 10s linear infinite;
 }
 
@@ -390,7 +390,7 @@
 
 .select-template-btn {
   padding: 1rem 3rem;
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  background: linear-gradient(135deg, #ffffff, var(--primary-blue));
   border: none;
   border-radius: 50px;
   color: white;
@@ -402,7 +402,7 @@
 
 .select-template-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(103, 41, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
 }
 
 @media (max-width: 768px) {

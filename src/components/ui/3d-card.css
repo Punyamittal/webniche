@@ -117,7 +117,7 @@
   position: absolute;
   top: 35px;
   left: 35px;
-  color: var(--primary-purple, #6729FF);
+  color: #ffffff;
   z-index: 10;
   transform: translate3d(0px, 0px, 70px);
   transition: all 0.5s ease-in-out;
@@ -125,6 +125,6 @@
 
 .card-3d:hover .card-3d-icon {
   transform: translate3d(0px, 0px, 90px);
-  color: var(--primary-blue, #6729FF);
+  color: #ffffff;
 }
 

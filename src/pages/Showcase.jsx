@@ -87,7 +87,7 @@ const Showcase = () => {
       title: 'Creative Designer Portfolio',
       category: 'Professional',
       style: 'Bold & Playful',
-      colors: ['#FFE043', '#6729FF', '#FF6B9D'],
+      colors: ['#FFE043', '#ffffff', '#FF6B9D'],
       image: 'designer',
       description: 'Vibrant, colorful portfolio for a graphic designer'
     },
@@ -105,7 +105,7 @@ const Showcase = () => {
       title: 'Student Developer Portfolio',
       category: 'Student',
       style: 'Dark Futuristic',
-      colors: ['#6729FF', '#141414', '#00FFFF'],
+      colors: ['#ffffff', '#141414', '#00FFFF'],
       image: 'developer',
       description: 'Modern dark theme with neon accents'
     },
@@ -132,7 +132,7 @@ const Showcase = () => {
       title: 'SaaS Landing Page',
       category: 'Business',
       style: 'Sleek Dashboard',
-      colors: ['#6729FF', '#4ECDC4', '#FFFFFF'],
+      colors: ['#ffffff', '#4ECDC4', '#FFFFFF'],
       image: 'saas',
       description: 'Professional SaaS product landing page'
     }
@@ -143,7 +143,7 @@ const Showcase = () => {
       <section className="showcase-hero">
         <div className="showcase-hero-background">
           <ColorBends
-            colors={["#6729FF", "#4ECDC4", "#FFE043"]}
+            colors={["#ffffff", "#4ECDC4", "#FFE043"]}
             rotation={30}
             speed={0.3}
             scale={1.2}

@@ -91,14 +91,14 @@
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
-  color: white;
-  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.4);
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: #000000;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
 }
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 40px rgba(103, 41, 255, 0.6);
+  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.6);
 }
 
 .cta-button.secondary {
@@ -146,7 +146,7 @@
 }
 
 .layer-1 {
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
   opacity: 0.8;
   transform: translateZ(0px) rotate(0deg);
   animation: morph1 8s ease-in-out infinite;
@@ -160,7 +160,7 @@
 }
 
 .layer-3 {
-  background: linear-gradient(135deg, var(--accent-pink), var(--primary-purple));
+  background: linear-gradient(135deg, var(--accent-pink), #ffffff);
   opacity: 0.4;
   transform: translateZ(100px) rotate(240deg);
   animation: morph3 12s ease-in-out infinite;
@@ -264,8 +264,8 @@
 }
 
 .feature-card:hover {
-  border-color: var(--primary-purple);
-  box-shadow: 0 10px 40px rgba(103, 41, 255, 0.2);
+  border-color: #ffffff;
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.2);
 }
 
 .feature-icon {
@@ -460,8 +460,8 @@
 }
 
 .pricing-highlight-card:hover {
-  border-color: var(--primary-purple);
-  box-shadow: 0 20px 60px rgba(103, 41, 255, 0.3);
+  border-color: #ffffff;
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
   transform: translateY(-8px);
 }
 
@@ -505,8 +505,8 @@
 .pricing-highlight-cta {
   display: inline-block;
   padding: 1rem 2.5rem;
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
-  color: white;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: #000000;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
@@ -517,12 +517,12 @@
 
 .pricing-highlight-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
 }
 
 .contact-info-box {
-  background: rgba(103, 41, 255, 0.1);
-  border: 1px solid rgba(103, 41, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;

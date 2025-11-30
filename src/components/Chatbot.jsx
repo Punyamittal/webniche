@@ -51,8 +51,8 @@ const Chatbot = () => {
         whileTap={{ scale: 0.9 }}
         animate={{ 
           boxShadow: isOpen 
-            ? '0 0 20px rgba(103, 41, 255, 0.5)' 
-            : '0 0 10px rgba(103, 41, 255, 0.3)' 
+            ? '0 0 20px rgba(255, 255, 255, 0.5)' 
+            : '0 0 10px rgba(255, 255, 255, 0.3)' 
         }}
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

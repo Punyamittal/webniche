@@ -8,7 +8,7 @@
 .services-hero {
   padding: 6rem 2rem 4rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(103, 41, 255, 0.1), rgba(255, 224, 67, 0.1));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 224, 67, 0.1));
 }
 
 .services-title {
@@ -57,8 +57,8 @@
 }
 
 .service-card:hover {
-  border-color: var(--primary-purple);
-  box-shadow: 0 20px 60px rgba(103, 41, 255, 0.3);
+  border-color: #ffffff;
+  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
 }
 
 .service-icon {
@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-purple);
+  color: #ffffff;
   width: 64px;
   height: 64px;
 }
@@ -113,7 +113,7 @@
 .service-button {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  background: linear-gradient(135deg, #ffffff, var(--primary-blue));
   border: none;
   border-radius: 12px;
   color: white;
@@ -124,7 +124,7 @@
 
 .service-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.4);
 }
 
 /* Dashboard Preview */
@@ -169,7 +169,7 @@
 }
 
 .nav-item.active {
-  color: #6729FF;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -185,7 +185,7 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6729FF, #4ECDC4);
+  background: linear-gradient(135deg, #ffffff, #4ECDC4);
 }
 
 .dashboard-content {
@@ -213,7 +213,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-purple);
+  color: #ffffff;
   width: 48px;
   height: 48px;
 }
@@ -267,14 +267,14 @@
 }
 
 .chart-btn:hover {
-  border-color: #6729FF;
-  color: #6729FF;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .chart-btn.active {
-  background: #6729FF;
+  background: #ffffff;
   color: white;
-  border-color: #6729FF;
+  border-color: #ffffff;
 }
 
 .chart-area {
@@ -290,7 +290,7 @@
 
 .chart-bar-dashboard {
   flex: 1;
-  background: linear-gradient(180deg, #6729FF, #4ECDC4);
+  background: linear-gradient(180deg, #ffffff, #4ECDC4);
   border-radius: 4px 4px 0 0;
   min-height: 20px;
 }
@@ -342,7 +342,7 @@
 }
 
 .api-feature-item:hover {
-  border-color: var(--primary-purple);
+  border-color: #ffffff;
   transform: translateX(5px);
 }
 
@@ -352,7 +352,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-purple);
+  color: #ffffff;
   width: 48px;
   height: 48px;
 }
@@ -436,7 +436,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+  background: linear-gradient(135deg, #ffffff, var(--primary-blue));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -444,7 +444,7 @@
   font-weight: 800;
   color: white;
   margin: 0 auto 1.5rem;
-  box-shadow: 0 10px 30px rgba(103, 41, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
 .process-card h3 {
