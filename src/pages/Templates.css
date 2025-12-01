@@ -6,6 +6,15 @@
   transition: background 0.3s ease;
 }
 
+.scroll-video-section {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .templates-hero-section {
   position: relative;
   width: 100%;
@@ -529,6 +538,46 @@
 .select-template-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
+}
+
+/* Templates Grid Section */
+.templates-grid-section {
+  padding: 4rem 2rem;
+  background: var(--dark-bg);
+}
+
+.template-item {
+  margin-bottom: 6rem;
+}
+
+.template-item:last-child {
+  margin-bottom: 0;
+}
+
+.template-item-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.template-item-subtitle {
+  display: block;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 0.5rem;
+}
+
+.template-item-description {
+  text-align: center;
+  color: var(--gray-light);
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Additional responsive optimizations for template sections */

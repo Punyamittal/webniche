@@ -84,7 +84,6 @@
 }
 
 .info-icon {
-  font-size: 2rem;
   width: 60px;
   height: 60px;
   display: flex;
@@ -93,6 +92,7 @@
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   flex-shrink: 0;
+  color: var(--primary-yellow);
 }
 
 .info-item h3 {

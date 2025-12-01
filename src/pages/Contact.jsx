@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Mail, Phone, Clock } from 'lucide-react'
 import AnimatedHeroSection from '../components/ui/animated-hero-section'
 import './Contact.css'
 
@@ -65,7 +66,9 @@ const Contact = () => {
 
               <div className="info-items">
                 <div className="info-item">
-                  <div className="info-icon">📧</div>
+                  <div className="info-icon">
+                    <Mail size={24} />
+                  </div>
                   <div>
                     <h3>Contact Us</h3>
                     <p>Reach out via phone or WhatsApp for fastest response!</p>
@@ -73,7 +76,9 @@ const Contact = () => {
                 </div>
                 
                 <div className="info-item">
-                  <div className="info-icon">📱</div>
+                  <div className="info-icon">
+                    <Phone size={24} />
+                  </div>
                   <div>
                     <h3>Phone</h3>
                     <p>
@@ -85,7 +90,9 @@ const Contact = () => {
                 </div>
                 
                 <div className="info-item">
-                  <div className="info-icon">⏰</div>
+                  <div className="info-icon">
+                    <Clock size={24} />
+                  </div>
                   <div>
                     <h3>Response Time</h3>
                     <p>Within 24 hours</p>

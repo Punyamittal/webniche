@@ -15,20 +15,11 @@ const Navbar = () => {
       ]
     },
     {
-      label: 'Pricing',
+      label: 'Pricing & Contact',
       bgColor: '#170D27',
       textColor: '#fff',
       links: [
-        { label: 'View Plans', href: '/pricing', ariaLabel: 'View Pricing Plans' },
-        { label: 'Compare', href: '/pricing', ariaLabel: 'Compare Pricing' }
-      ]
-    },
-    {
-      label: 'Contact',
-      bgColor: '#271E37',
-      textColor: '#fff',
-      links: [
-        { label: 'Get in Touch', href: '/contact', ariaLabel: 'Contact Us' },
+        { label: 'Compare', href: '/pricing', ariaLabel: 'Compare Pricing' },
         { label: 'Support', href: '/contact', ariaLabel: 'Get Support' }
       ]
     }
