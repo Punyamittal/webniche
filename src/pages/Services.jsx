@@ -1,6 +1,14 @@
 import { motion } from 'framer-motion'
 import DatabaseWithRestApi from '../components/ui/database-with-rest-api'
 import ExpandOnHover from '../components/ui/expand-cards'
+import {
+  ContainerScroll,
+  ContainerSticky,
+  ContainerAnimated,
+  ContainerInset,
+  HeroVideo,
+  HeroButton
+} from '../components/ui/animated-video-on-scroll'
 import { Building2, ShoppingCart, Rocket, Target, Plug, Database, Zap, Lock, BarChart3, Users, TrendingUp } from 'lucide-react'
 import './Services.css'
 
@@ -89,20 +97,43 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <section className="services-hero">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="services-title">
-            Portfolio <span className="highlight">Services</span>
-          </h1>
-          <p className="services-subtitle">
-            We specialize in creating stunning, affordable portfolio websites for students, professionals, and creators.
-            Starting from just ₹2000!
-          </p>
-        </motion.div>
+      {/* Animated Video Hero Section */}
+      <section className="services-hero-video">
+        <ContainerScroll className="h-[300vh]">
+          <ContainerSticky
+            style={{
+              background:
+                "radial-gradient(40% 40% at 50% 20%, #0e19ae 0%, #0b1387 22.92%, #080f67 42.71%, #030526 88.54%)", 
+            }}
+            className="bg-stone-900 px-6 py-10 text-slate-50"
+          >
+            <div className="w-full max-w-6xl mx-auto space-y-6">
+              <ContainerAnimated className="space-y-4 text-center">
+                <h1 className="text-5xl font-medium tracking-tighter md:text-6xl">
+                  Portfolio <span className="highlight">Services</span>
+                </h1>
+                <p className="mx-auto max-w-[42ch] opacity-80">
+                  We specialize in creating stunning, affordable portfolio websites for students, professionals, and creators.
+                  Starting from just ₹2000!
+                </p>
+              </ContainerAnimated>
+              <ContainerInset className="max-h-[450px] w-auto py-6 flex items-center justify-center">
+                <HeroVideo
+                  src="https://videos.pexels.com/video-files/8566672/8566672-uhd_2560_1440_30fps.mp4"
+                  data-src="https://videos.pexels.com/video-files/8566672/8566672-uhd_2560_1440_30fps.mp4"
+                />
+              </ContainerInset>
+              <ContainerAnimated
+                transition={{ delay: 0.4 }}
+                outputRange={[-120, 0]}
+                inputRange={[0, 0.7]}
+                className="mx-auto mt-2 w-fit"
+              >
+                <HeroButton>Get Started</HeroButton>
+              </ContainerAnimated>
+            </div>
+          </ContainerSticky>
+        </ContainerScroll>
       </section>
 
       <section className="services-section">

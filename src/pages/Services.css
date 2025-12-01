@@ -11,6 +11,12 @@
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 224, 67, 0.1));
 }
 
+.services-hero-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .services-title {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;

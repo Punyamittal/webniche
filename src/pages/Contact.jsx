@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import AnimatedHeroSection from '../components/ui/animated-hero-section'
 import './Contact.css'
 
 const Contact = () => {
@@ -44,18 +45,7 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <section className="contact-hero">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="contact-title">
-            Get <span className="highlight">Started</span>
-          </h1>
-          <p className="contact-subtitle">
-            Ready to create your custom portfolio? Fill out the form below and we'll get back to you within 24 hours.
-          </p>
-        </motion.div>
+        <AnimatedHeroSection text={["CONTACT"]} />
       </section>
 
       <section className="contact-section">

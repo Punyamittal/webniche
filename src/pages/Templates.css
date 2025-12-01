@@ -11,41 +11,15 @@
   width: 100%;
   margin-top: 0;
   padding-top: 0;
-  background: #0a0a0a;
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(255, 224, 67, 0.08) 0px, transparent 50%),
-    radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(255, 224, 67, 0.06) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, rgba(255, 255, 255, 0.04) 0px, transparent 50%);
-  overflow: hidden;
-  z-index: 0;
+  background: #000;
+  overflow: visible;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.templates-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: 
-    linear-gradient(180deg, transparent 0%, rgba(20, 20, 20, 0.3) 50%, #0a0a0a 100%);
-  z-index: 1;
-  pointer-events: none;
+  height: 200vh; /* Allow for scroll-triggered animations */
 }
 
 .templates-hero {
-  padding: 4rem 1.5rem 3rem;
-  text-align: center;
-  position: relative;
-  z-index: 2;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .templates-title {

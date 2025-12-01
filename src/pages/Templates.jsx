@@ -1,6 +1,6 @@
 import { ContainerScroll } from '../components/ui/container-scroll-animation'
 import { Carousel } from '../components/ui/carousel'
-import { NeonOrbs } from '../components/ui/neon-orbs'
+import { ArtificialHero } from '../components/ui/artificial-hero'
 import './Templates.css'
 
 const Templates = () => {
@@ -57,15 +57,15 @@ const Templates = () => {
 
   return (
     <div className="templates-page">
-      {/* Hero Section with Neon Orbs */}
+      {/* Hero Section with Artificial Hero */}
       <section className="templates-hero-section">
-        <div className="templates-hero">
-          <NeonOrbs 
-            title="PORTFOLIO TEMPLATES"
-            subtitle="Choose Your Perfect Design"
-            className="min-h-[90vh] md:min-h-screen"
-          />
-        </div>
+        <ArtificialHero 
+          title="TEMPLATES"
+          leftText="In creativity\nis where\nideas take form"
+          rightText="In design\nwe find\ntrue expression"
+          bottomText="Portfolio Templates by WebNICHE"
+          showNav={false}
+        />
       </section>
       
       {/* Templates Grid */}
