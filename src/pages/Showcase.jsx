@@ -4,6 +4,7 @@ import ExpandOnHover from '../components/ui/expand-cards'
 import MagicBento from '../components/ui/magic-bento'
 import { TestimonialModal } from '../components/ui/testimonial-modal'
 import ColorBends from '../components/ui/color-bends'
+import { InteractiveRobotSpline } from '../components/ui/interactive-3d-robot'
 import './Showcase.css'
 
 const Showcase = () => {
@@ -138,38 +139,35 @@ const Showcase = () => {
     }
   ]
 
+  const ROBOT_SCENE_URL = "https://prod.spline.design/PyzDhpQ9E5f1E3MT/scene.splinecode";
+
   return (
     <div className="showcase-page">
       <section className="showcase-hero">
-        <div className="showcase-hero-background">
-          <ColorBends
-            colors={["#ffffff", "#4ECDC4", "#FFE043"]}
-            rotation={30}
-            speed={0.3}
-            scale={1.2}
-            frequency={1.4}
-            warpStrength={1.2}
-            mouseInfluence={0.8}
-            parallax={0.6}
-            noise={0.05}
-            transparent
+        <div className="relative w-screen h-screen overflow-hidden">
+          <InteractiveRobotSpline
+            scene={ROBOT_SCENE_URL}
+            className="absolute inset-0 z-0" 
           />
+        
+          <div className="absolute inset-0 z-10 pt-20 md:pt-32 lg:pt-40 px-4 md:px-8 pointer-events-none">
+            <motion.div
+              className="text-center text-white drop-shadow-lg w-full max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
+                Our <span className="highlight">Work</span>
+              </h1>
+              <p className="text-base md:text-lg lg:text-xl text-white/90 drop-shadow-md">
+                Explore our portfolio of stunning designs across different styles and industries.
+                <br />
+                Check out live sample portfolios below!
+              </p>
+            </motion.div>
+          </div>
         </div>
-        <motion.div
-          className="showcase-hero-content"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="showcase-title">
-            Our <span className="highlight">Work</span>
-          </h1>
-          <p className="showcase-subtitle">
-            Explore our portfolio of stunning designs across different styles and industries.
-            <br />
-            Check out live sample portfolios below!
-          </p>
-        </motion.div>
       </section>
 
       <section className="projects-section">

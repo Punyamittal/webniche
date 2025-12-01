@@ -59,11 +59,13 @@ const Templates = () => {
     <div className="templates-page">
       {/* Hero Section with Neon Orbs */}
       <section className="templates-hero-section">
-        <NeonOrbs 
-          title="PORTFOLIO TEMPLATES"
-          subtitle="Choose Your Perfect Design"
-          className="min-h-[90vh]"
-        />
+        <div className="templates-hero">
+          <NeonOrbs 
+            title="PORTFOLIO TEMPLATES"
+            subtitle="Choose Your Perfect Design"
+            className="min-h-[90vh] md:min-h-screen"
+          />
+        </div>
       </section>
       
       {/* Templates Grid */}

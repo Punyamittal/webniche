@@ -1,8 +1,9 @@
 .templates-page {
   min-height: 100vh;
-  background: var(--dark-bg);
+  background: #0a0a0a;
   color: var(--text-light);
   padding-top: 0;
+  transition: background 0.3s ease;
 }
 
 .templates-hero-section {
@@ -10,29 +11,180 @@
   width: 100%;
   margin-top: 0;
   padding-top: 0;
-  background: var(--dark-bg);
+  background: #0a0a0a;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(255, 224, 67, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(255, 255, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(255, 224, 67, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 255, 255, 0.04) 0px, transparent 50%);
   overflow: hidden;
   z-index: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.templates-hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(180deg, transparent 0%, rgba(20, 20, 20, 0.3) 50%, #0a0a0a 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .templates-hero {
-  padding: 6rem 2rem 4rem;
+  padding: 4rem 1.5rem 3rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 224, 67, 0.1));
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .templates-title {
-  font-size: clamp(3rem, 8vw, 6rem);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
   letter-spacing: -2px;
+  color: #ffffff;
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.5);
+  line-height: 1.1;
 }
 
 .templates-subtitle {
-  font-size: 1.25rem;
-  color: var(--gray-light);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.75);
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced dark mode styling for hero section */
+.templates-hero-section .neon-orbs-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced NeonOrbs dark mode styling within templates */
+.templates-hero-section > div > div {
+  background: #0a0a0a !important;
+  background-image: 
+    radial-gradient(at 20% 20%, rgba(255, 224, 67, 0.1) 0px, transparent 50%),
+    radial-gradient(at 80% 80%, rgba(255, 255, 255, 0.06) 0px, transparent 50%) !important;
+}
+
+/* Ensure text is visible in dark mode */
+.templates-hero-section h1,
+.templates-hero-section .text-purple-900,
+.templates-hero-section .dark .text-purple-900 {
+  color: #ffffff !important;
+}
+
+.templates-hero-section p,
+.templates-hero-section .text-purple-400,
+.templates-hero-section .dark .text-purple-400 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Better text visibility on dark background */
+.templates-hero-section h1 {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+/* Smooth transitions for hero section */
+.templates-hero-section * {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Improved mobile text sizing */
+@media (max-width: 768px) {
+  .templates-hero-section h1 {
+    font-size: clamp(1.75rem, 6vw, 2.5rem) !important;
+    letter-spacing: 0.1em !important;
+    line-height: 1.2 !important;
+  }
+
+  .templates-hero-section p {
+    font-size: clamp(0.875rem, 2vw, 1rem) !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Adjust NeonOrbs container for mobile */
+  .templates-hero-section > div {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .templates-hero-section {
+    min-height: 90vh;
+  }
+
+  .templates-hero {
+    padding: 3.5rem 2rem 2.5rem;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .templates-hero-section {
+    min-height: 85vh;
+    padding: 2rem 0;
+  }
+
+  .templates-hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .templates-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+  }
+
+  .templates-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .templates-hero-section {
+    min-height: 80vh;
+  }
+
+  .templates-hero {
+    padding: 2rem 0.75rem 1.5rem;
+  }
+
+  .templates-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .templates-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
 .style-selector-section {
@@ -405,6 +557,7 @@
   box-shadow: 0 15px 40px rgba(255, 255, 255, 0.4);
 }
 
+/* Additional responsive optimizations for template sections */
 @media (max-width: 768px) {
   .playful-title {
     font-size: 3rem;
@@ -421,6 +574,44 @@
   
   .minimal-name {
     font-size: 2.5rem;
+  }
+
+  .template-preview-section {
+    padding: 2rem 1rem;
+  }
+
+  .preview-content {
+    padding: 1.5rem;
+    min-height: 400px;
+  }
+
+  .style-selector-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .style-tabs {
+    gap: 0.75rem;
+  }
+
+  .style-tab {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .template-preview-section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .preview-content {
+    padding: 1rem;
+    min-height: 350px;
+  }
+
+  .style-tab {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.85rem;
   }
 }
 
